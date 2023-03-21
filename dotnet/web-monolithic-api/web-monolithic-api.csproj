@@ -13,4 +13,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\batch-computing\batch-computing.csproj" />
+    <ProjectReference Include="..\continuous-computing\continuous-computing.csproj" />
+  </ItemGroup>
+
 </Project>
