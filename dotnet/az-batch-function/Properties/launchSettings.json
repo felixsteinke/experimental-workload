@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "az-batch-function": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "httpPort": 30055,
+      "useSSL": false
+    }
+  }
+}
