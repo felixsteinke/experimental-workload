@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.experimental</groupId>
+    <artifactId>experimental-workload</artifactId>
+    <name>experimental-workload</name>
+    <description>experimental-workload maven-reactor</description>
+    <version>1.0.0</version>
+
+    <properties>
+        <encoding>UTF-8</encoding>
+        <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
+        <maven.compiler.version>17</maven.compiler.version>
+        <maven.compiler.source>${maven.compiler.version}</maven.compiler.source>
+        <maven.compiler.target>${maven.compiler.version}</maven.compiler.target>
+    </properties>
+
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>azure-functions/sorting-java-function</module>
+        <module>libraries/sorting-java-library</module>
+        <module>standalone-apps/sorting-api-spring</module>
+    </modules>
+
+</project>

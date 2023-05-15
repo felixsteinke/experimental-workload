@@ -1,4 +1,4 @@
-package com.sample.sorting;
+package org.experimental.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
