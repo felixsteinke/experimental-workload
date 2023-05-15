@@ -11,19 +11,19 @@ import java.util.ArrayList;
 @RestController
 public class SortingController {
 
-    @PostMapping("/sort-on1")
+    @PostMapping("/api/sort-on1")
     public ResponseEntity<ArrayList<Integer>> sortOn1(@RequestBody ArrayList<Integer> numbers) {
         SortingProcessor.sortInON1(numbers);
         return new ResponseEntity<>(numbers, HttpStatus.OK);
     }
 
-    @PostMapping("/sort-on2")
+    @PostMapping("/api/sort-on2")
     public ResponseEntity<ArrayList<Integer>> sortOn2(@RequestBody ArrayList<Integer> numbers) {
         SortingProcessor.sortInON2(numbers);
         return new ResponseEntity<>(numbers, HttpStatus.OK);
     }
 
-    @PostMapping("/sort-on3")
+    @PostMapping("/api/sort-on3")
     public ResponseEntity<ArrayList<Integer>> sortOn3(@RequestBody ArrayList<Integer> numbers) {
         SortingProcessor.sortInON3(numbers);
         return new ResponseEntity<>(numbers, HttpStatus.OK);
