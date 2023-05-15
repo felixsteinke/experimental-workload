@@ -6,13 +6,13 @@
   },
   "item": [
     {
-      "name": "azure-functions",
+      "name": "functions",
       "item": [
         {
-          "name": "sorting-function",
+          "name": "azure-sorting-function-java",
           "item": [
             {
-              "name": "java-sorting-fast-10k",
+              "name": "sort-fast-10k",
               "event": [
                 {
                   "listen": "test",
@@ -39,9 +39,9 @@
                   }
                 },
                 "url": {
-                  "raw": "{{sorting-azure-function-java-host}}/api/sorting-fast",
+                  "raw": "{{azure-sorting-function-java-host}}/api/sorting-fast",
                   "host": [
-                    "{{sorting-azure-function-java-host}}"
+                    "{{azure-sorting-function-java-host}}"
                   ],
                   "path": [
                     "api",
@@ -52,7 +52,7 @@
               "response": []
             },
             {
-              "name": "java-sorting-slow-10k",
+              "name": "sort-slow-10k",
               "event": [
                 {
                   "listen": "test",
@@ -79,9 +79,9 @@
                   }
                 },
                 "url": {
-                  "raw": "{{sorting-azure-function-java-host}}/api/sorting-slow",
+                  "raw": "{{azure-sorting-function-java-host}}/api/sorting-slow",
                   "host": [
-                    "{{sorting-azure-function-java-host}}"
+                    "{{azure-sorting-function-java-host}}"
                   ],
                   "path": [
                     "api",
@@ -99,10 +99,10 @@
       "name": "standalone-apps",
       "item": [
         {
-          "name": "sorting-api",
+          "name": "sorting-api-spring",
           "item": [
             {
-              "name": "spring-sorting-O(n*log)-10k",
+              "name": "sort-O(n*log)-10k",
               "event": [
                 {
                   "listen": "test",
@@ -142,7 +142,7 @@
               "response": []
             },
             {
-              "name": "spring-sorting-O(n^2)-10k",
+              "name": "sort-O(n^2)-10k",
               "event": [
                 {
                   "listen": "test",
@@ -182,7 +182,7 @@
               "response": []
             },
             {
-              "name": "spring-sorting-O(n^3)-10k",
+              "name": "sort-O(n^3)-10k",
               "event": [
                 {
                   "listen": "test",
@@ -253,8 +253,8 @@
       "type": "default"
     },
     {
-      "key": "sorting-azure-function-java-host",
-      "value": "https://sorting-function-java-15052023.azurewebsites.net",
+      "key": "azure-sorting-function-java-host",
+      "value": "https://azure-sorting-function-java-2023.azurewebsites.net",
       "type": "default"
     }
   ]

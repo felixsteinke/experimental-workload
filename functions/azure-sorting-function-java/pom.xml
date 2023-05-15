@@ -4,8 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.experimental</groupId>
-    <artifactId>sorting-function-java</artifactId>
-    <name>sorting-function-java</name>
+    <artifactId>azure-sorting-function-java</artifactId>
+    <name>azure-sorting-function-java</name>
     <version>1.0.0</version>
 
     <packaging>jar</packaging>
@@ -14,7 +14,7 @@
         <java.version>11</java.version>
         <azure.functions.maven.plugin.version>1.16.0</azure.functions.maven.plugin.version>
         <azure.functions.java.library.version>3.0.0</azure.functions.java.library.version>
-        <functionAppName>sorting-function-java-15052023</functionAppName>
+        <functionAppName>azure-sorting-function-java-2023</functionAppName>
         <encoding>UTF-8</encoding>
         <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
