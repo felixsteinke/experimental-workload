@@ -21,8 +21,8 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>azure-functions/sorting-java-function</module>
-        <module>libraries/sorting-java-library</module>
+        <module>azure-functions/sorting-function-java</module>
+        <module>libraries/sorting-library-java</module>
         <module>standalone-apps/sorting-api-spring</module>
     </modules>
 
