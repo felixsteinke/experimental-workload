@@ -31,7 +31,7 @@ public class SortingControllerTest {
         sampleArray.sort(Integer::compareTo);
         String expectedResponse = sampleArray.toString();
 
-        mockMvc.perform(MockMvcRequestBuilders.post("/sort-on1")
+        mockMvc.perform(MockMvcRequestBuilders.post("/api/sort-on1")
                         .contentType(MediaType.APPLICATION_JSON_VALUE)
                         .content(request))
                 .andExpect(status().isOk())
@@ -45,7 +45,7 @@ public class SortingControllerTest {
         sampleArray.sort(Integer::compareTo);
         String expectedResponse = sampleArray.toString();
 
-        mockMvc.perform(MockMvcRequestBuilders.post("/sort-on2")
+        mockMvc.perform(MockMvcRequestBuilders.post("/api/sort-on2")
                         .contentType(MediaType.APPLICATION_JSON_VALUE)
                         .content(request))
                 .andExpect(status().isOk())
@@ -59,7 +59,7 @@ public class SortingControllerTest {
         sampleArray.sort(Integer::compareTo);
         String expectedResponse = sampleArray.toString();
 
-        mockMvc.perform(MockMvcRequestBuilders.post("/sort-on3")
+        mockMvc.perform(MockMvcRequestBuilders.post("/api/sort-on3")
                         .contentType(MediaType.APPLICATION_JSON_VALUE)
                         .content(request))
                 .andExpect(status().isOk())

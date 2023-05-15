@@ -22,6 +22,7 @@
 
     <modules>
         <module>functions/azure-sorting-function-java</module>
+        <module>functions/gcp-sorting-function-java</module>
         <module>libraries/sorting-library-java</module>
         <module>standalone-apps/sorting-api-spring</module>
     </modules>
