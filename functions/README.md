@@ -6,6 +6,8 @@
 
 Prerequisite is the [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows).
 
+### C#
+
 ### Java
 
 [__Local Run:__](https://learn.microsoft.com/en-us/azure/azure-functions/create-first-function-cli-java)

@@ -20,9 +20,8 @@ public class AzureHttpFunction {
             @HttpTrigger(name = "req", methods = {HttpMethod.GET, HttpMethod.POST}, authLevel = AuthorizationLevel.ANONYMOUS)
                     HttpRequestMessage<Optional<ArrayList<Integer>>> request,
             final ExecutionContext context) {
-
         // Logging
-        context.getLogger().info("Azure HTTP [" + request.getHttpMethod() + "] function processed a fast request with body: " + request.getBody().orElse(null));
+        context.getLogger().info("Azure Java HTTP [" + request.getHttpMethod() + "] function processed a fast request.");
         // Validation
         if (request.getBody().isEmpty()) {
             return request.createResponseBuilder(HttpStatus.BAD_REQUEST)
@@ -31,6 +30,8 @@ public class AzureHttpFunction {
         }
         // Process
         final ArrayList<Integer> body = request.getBody().get();
+        String bodyString = body.toString();
+        context.getLogger().info("Request Body: " + ((bodyString.length() > 100) ? bodyString.substring(0, 100) + " ...(" + (bodyString.length() - 100) + " more characters)" : bodyString));
         SortingProcessor.sortInON1(body);
         // Response
         return request.createResponseBuilder(HttpStatus.OK)
@@ -48,7 +49,7 @@ public class AzureHttpFunction {
                     HttpRequestMessage<Optional<ArrayList<Integer>>> request,
             final ExecutionContext context) {
         // Logging
-        context.getLogger().info("Java HTTP trigger processed a slow request with body: " + request.getBody().orElse(null));
+        context.getLogger().info("Azure Java HTTP [" + request.getHttpMethod() + "] function processed a slow request.");
         // Validation
         if (request.getBody().isEmpty()) {
             return request.createResponseBuilder(HttpStatus.BAD_REQUEST)
@@ -57,6 +58,8 @@ public class AzureHttpFunction {
         }
         // Process
         final ArrayList<Integer> body = request.getBody().get();
+        String bodyString = body.toString();
+        context.getLogger().info("Request Body: " + ((bodyString.length() > 100) ? bodyString.substring(0, 100) + " ...(" + (bodyString.length() - 100) + " more characters)" : bodyString));
         SortingProcessor.sortInON2(body);
         // Response
         return request.createResponseBuilder(HttpStatus.OK)
