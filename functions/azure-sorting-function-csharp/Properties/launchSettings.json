@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "azure_sorting_function_csharp": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7111"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "httpPort": 33518,
+      "useSSL": false
+    }
+  }
+}
