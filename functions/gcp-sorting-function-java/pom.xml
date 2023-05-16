@@ -18,12 +18,25 @@
   </properties>
 
   <dependencies>
+    <dependency>
+      <groupId>com.google.cloud.functions</groupId>
+      <artifactId>functions-framework-api</artifactId>
+      <version>1.0.4</version>
+      <scope>provided</scope>
+    </dependency>
+
     <!-- Test -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter</artifactId>
       <version>5.9.2</version>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.14.2</version>
+      <scope>compile</scope>
     </dependency>
   </dependencies>
 
@@ -37,9 +50,20 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
         <configuration>
-          <source>9</source>
-          <target>9</target>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
+          <encoding>${project.build.sourceEncoding}</encoding>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>com.google.cloud.functions</groupId>
+        <artifactId>function-maven-plugin</artifactId>
+        <version>0.10.1</version>
+        <configuration>
+          <functionTarget>org.experimental.function.GcpHttpFunctionFast</functionTarget>
         </configuration>
       </plugin>
     </plugins>

@@ -11,7 +11,7 @@ import java.util.Optional;
 /**
  * Azure Functions with HTTP Trigger.
  */
-public class HttpTriggerFunction {
+public class AzureHttpFunction {
     /**
      * This function listens at endpoint "/api/sorting-fast".
      */
@@ -22,7 +22,7 @@ public class HttpTriggerFunction {
             final ExecutionContext context) {
 
         // Logging
-        context.getLogger().info("Java HTTP trigger processed a fast request with body: " + request.getBody().orElse(null));
+        context.getLogger().info("Azure HTTP [" + request.getHttpMethod() + "] function processed a fast request with body: " + request.getBody().orElse(null));
         // Validation
         if (request.getBody().isEmpty()) {
             return request.createResponseBuilder(HttpStatus.BAD_REQUEST)
