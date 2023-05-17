@@ -25,6 +25,7 @@
         <module>functions/gcp-sorting-function-java</module>
         <module>libraries/sorting-library-java</module>
         <module>standalone-apps/sorting-api-spring</module>
+        <module>connected-apps/db-api-spring</module>
     </modules>
 
 </project>

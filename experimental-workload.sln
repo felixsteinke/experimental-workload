@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sorting-api-dotnet", "stand
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sorting-api-dotnet-test", "standalone-apps\sorting-api-dotnet-test\sorting-api-dotnet-test.csproj", "{79C08073-E525-44BF-9CB4-ED65F770C7AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "db-api-dotnet", "connected-apps\db-api-dotnet\db-api-dotnet.csproj", "{9335BA35-7B7F-499E-BB1E-C95EDAB9B9E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{79C08073-E525-44BF-9CB4-ED65F770C7AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79C08073-E525-44BF-9CB4-ED65F770C7AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79C08073-E525-44BF-9CB4-ED65F770C7AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9335BA35-7B7F-499E-BB1E-C95EDAB9B9E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9335BA35-7B7F-499E-BB1E-C95EDAB9B9E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9335BA35-7B7F-499E-BB1E-C95EDAB9B9E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9335BA35-7B7F-499E-BB1E-C95EDAB9B9E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
