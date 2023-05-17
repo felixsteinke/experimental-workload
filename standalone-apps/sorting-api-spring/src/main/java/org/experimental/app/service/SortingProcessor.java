@@ -1,4 +1,4 @@
-package org.experimental.app;
+package org.experimental.app.service;
 
 import java.util.ArrayList;
 

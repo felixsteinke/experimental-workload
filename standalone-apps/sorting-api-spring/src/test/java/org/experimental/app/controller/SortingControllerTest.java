@@ -1,4 +1,4 @@
-package org.experimental.app;
+package org.experimental.app.controller;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -10,13 +10,14 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.standaloneSetup;
 
 @WebMvcTest(SortingController.class)
 public class SortingControllerTest {
-
+    private final Logger logger = Logger.getLogger(SortingControllerTest.class.getName());
     private final MockMvc mockMvc = standaloneSetup(new SortingController()).build();
     private ArrayList<Integer> sampleArray;
 
@@ -26,8 +27,9 @@ public class SortingControllerTest {
     }
 
     @Test
-    public void testSortOn1() throws Exception {
+    public void sortOn1() throws Exception {
         String request = sampleArray.toString();
+        logger.info("Test Input: " + request);
         sampleArray.sort(Integer::compareTo);
         String expectedResponse = sampleArray.toString();
 
@@ -40,8 +42,9 @@ public class SortingControllerTest {
     }
 
     @Test
-    public void testSortOn2() throws Exception {
+    public void sortOn2() throws Exception {
         String request = sampleArray.toString();
+        logger.info("Test Input: " + request);
         sampleArray.sort(Integer::compareTo);
         String expectedResponse = sampleArray.toString();
 
@@ -54,8 +57,9 @@ public class SortingControllerTest {
     }
 
     @Test
-    public void testSortOn3() throws Exception {
+    public void sortOn3() throws Exception {
         String request = sampleArray.toString();
+        logger.info("Test Input: " + request);
         sampleArray.sort(Integer::compareTo);
         String expectedResponse = sampleArray.toString();
 

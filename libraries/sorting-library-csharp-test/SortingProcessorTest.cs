@@ -4,7 +4,7 @@ namespace sorting_library_csharp_test;
 
 public class SortingProcessorTest
 {
-    private List<int> sampleArray;
+    private readonly List<int> sampleArray;
 
     private static bool IsSorted(List<int> array)
     {

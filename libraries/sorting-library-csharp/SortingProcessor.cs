@@ -2,22 +2,20 @@
 
 public abstract class SortingProcessor
 {
-    /**
-     * O(n*log(n)) sorting algorithm
-     *
-     * @param numbers as mutable array to be sorted
-     */
+    /// <summary>
+    /// O(n*log(n)) sorting algorithm
+    /// </summary>
+    /// <param name="numbers"> as mutable array to be sorted</param>
     public static void SortInON1(List<int> numbers)
     {
         // Sort the input list using O(n*log(n)) algorithm
         numbers.Sort();
     }
 
-    /**
-     * O(n^2) sorting algorithm
-     *
-     * @param numbers as mutable array to be sorted
-     */
+    /// <summary>
+    /// O(n^2) sorting algorithm
+    /// </summary>
+    /// <param name="numbers"> as mutable array to be sorted</param>
     public static void SortInON2(List<int> numbers)
     {
         // Sort the input list using O(n^2) algorithm
@@ -35,11 +33,10 @@ public abstract class SortingProcessor
         }
     }
 
-    /**
-     * O(n^3) sorting algorithm
-     *
-     * @param numbers as mutable array to be sorted
-     */
+    /// <summary>
+    /// O(n^3) sorting algorithm
+    /// </summary>
+    /// <param name="numbers"> as mutable array to be sorted</param>
     public static void SortInON3(List<int> numbers)
     {
         // Sort the input list using O(n^3) algorithm
