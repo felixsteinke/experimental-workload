@@ -36,7 +36,7 @@ public class ProductController : ControllerBase
     [HttpPost("")]
     public ActionResult<ProductEntity> Post(ProductEntity model)
     {
-        _logger.LogInformation("Insert object with name={Name}.", model.Name);
+        _logger.LogInformation("Insert object with id={Id}.", model.Id);
         var createdEntity = _productDb.Add(model);
         _productDb.SaveChanges();
         return Ok(createdEntity);
@@ -45,7 +45,7 @@ public class ProductController : ControllerBase
     [HttpPut("")]
     public ActionResult<ProductEntity> Put(ProductEntity model)
     {
-        _logger.LogInformation("Update object with id={Id} and name={Name}.", model.Id, model.Name);
+        _logger.LogInformation("Update object with id={Id}.", model.Id);
         var modifiedEntity = _productDb.Update(model);
         _productDb.SaveChanges();
         return Ok(modifiedEntity);

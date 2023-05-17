@@ -18,7 +18,7 @@ public class ProductItemEntitiy
     [StringLength(1000)]
     public string Description { get; set; } = default!;
 
-    [ForeignKey("productId")]
+    [ForeignKey("product_id")]
     [InverseProperty("ProductItems")]
     public virtual ProductEntity Product { get; set; } = default!;
 }

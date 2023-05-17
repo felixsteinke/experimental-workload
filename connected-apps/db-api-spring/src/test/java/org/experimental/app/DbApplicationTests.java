@@ -9,5 +9,4 @@ class DbApplicationTests {
     @Test
     void contextLoads() {
     }
-
 }
