@@ -1,4 +1,4 @@
-# Serverless Function Workloads
+# Workload from Serverless Functions
 
 ## Microsoft Azure
 

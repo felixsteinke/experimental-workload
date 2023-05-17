@@ -1,15 +1,35 @@
-# Experimental Workload
+# Experimental Workload Repository
 
 ## Project Structure
 
 ```
-dotnet
- |____ az-batch-function		-> Azure Function Project for Batch Computing
- |____ az-continuous-function	-> Azure Function Project for Continuous Application Computing
- |____ batch-computing			-> Business Logic for Batch Computing
- |____ continuous-computing		-> Business Logic for Continuous Application Computing
- |____ web-batch-api			-> Web Application for Batch Computing
- |____ web-continuous-api		-> Web Application for Continuous Application Computing
- |____ web-monolithic-api		-> Web Application for Batch & Continuous Application Computing
- |____ dotnet.sln
+root
+ |__ connected-apps/  --> applications with external services as dependencies
+ |__ functions/       --> serverless functions as native cloud implementations
+ |__ libraries/       --> business logic of shared workloads
+ |__ standalone-apps/ --> application without external dependencies
+ |__ tools/           --> utility tools for experiments
+ |__ repo.postman_collection.json --> requests for all applications
+ |__ repo.sln         --> packaging for all c# projects
+ |__ pom.xml          --> packaging for all java modules
 ```
+
+Check out the directories for a more detailed description.
+
+## System Requirements
+
+### C# and .NET
+
+* .NET SDK
+* .NET IDE (Visual Studio)
+
+### Java and Spring Boot
+
+* JDK 17+
+* Maven 3.8+
+* Java IDE (IntelliJ)
+
+### Tools
+
+* Docker Desktop
+* Postman
