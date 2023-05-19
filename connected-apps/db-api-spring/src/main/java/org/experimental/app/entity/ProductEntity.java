@@ -18,7 +18,6 @@ import java.util.Set;
 @Entity(name = "Product")
 @Table(name = "products")
 public class ProductEntity {
-
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
