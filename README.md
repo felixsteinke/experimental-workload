@@ -25,11 +25,21 @@ Check out the directories for a more detailed description.
 
 ### Java and Spring Boot
 
-* JDK 17+
-* Maven 3.8+
-* Java IDE (IntelliJ)
+* [JDK 17+](https://openjdk.org/)
+    * Check for system environment variables `JAVA_HOME` and `PATH`
+    * Test with: `java --version`
+* [Maven 3.8+](https://maven.apache.org/download.cgi)
+    * Check for system environment variables `MAVEN_HOME` and `PATH`
+    * Test with: `mvn -v`
+* Java IDE ([IntelliJ](https://www.jetbrains.com/idea/download/))
 
-### Tools
+### Microsoft Azure
 
-* Docker Desktop
-* Postman
+* [Azure CLI](https://learn.microsoft.com/cli/azure/):
+    * Check for system environment variable `PATH`
+    * Test with: `az -v`
+
+### Other Tools
+
+* [Docker](https://www.docker.com/)
+* [Postman](https://www.postman.com/downloads/)
