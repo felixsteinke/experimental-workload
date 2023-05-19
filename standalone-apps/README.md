@@ -19,5 +19,8 @@
     * Rename native image: `docker tag sorting-api-spring:1.0.0 felixsteinke/sorting-api-spring:native`
     * Run container: `docker run -p 8080:8080 felixsteinke/sorting-api-spring:native`
     * Push native image: `docker push felixsteinke/sorting-api-spring:native`
-* TODOs:
-    * Native Swagger UI is not rendered.
+    * <mark>TODO:</mark> Native Swagger UI is not rendered.
+* Azure Web-App Deployment:
+    * Login with Azure CLI: `az login`
+    * Build and deploy (with [azure-webapp-maven-plugin](sorting-api-spring/pom.xml)): `mvn package azure-webapp:deploy`
+
