@@ -8,7 +8,6 @@ __Install libraries:__
 
 ```shell
 npm install -g @apideck/postman-to-k6
-cd k6-loadtests
 ```
 
 __Convert collection to script:__
