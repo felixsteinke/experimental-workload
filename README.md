@@ -43,3 +43,4 @@ Check out the directories for a more detailed description.
 
 * [Docker](https://www.docker.com/)
 * [Postman](https://www.postman.com/downloads/)
+* [NodeJS](https://nodejs.org/en/download)
