@@ -15,9 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sorting-api-dotnet-test", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "db-api-dotnet", "connected-apps\db-api-dotnet\db-api-dotnet.csproj", "{9335BA35-7B7F-499E-BB1E-C95EDAB9B9E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "odata-api-dotnet", "standalone-apps\odata-api-dotnet\odata-api-dotnet.csproj", "{484A84C3-0AFD-473D-8B13-D92CD9406D69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "odata-api-dotnet", "standalone-apps\odata-api-dotnet\odata-api-dotnet.csproj", "{484A84C3-0AFD-473D-8B13-D92CD9406D69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "graphql-api-dotnet", "standalone-apps\graphql-api-dotnet\graphql-api-dotnet.csproj", "{013988B1-0CF1-46E8-A0AD-4A92CBA75EF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "graphql-api-dotnet", "standalone-apps\graphql-api-dotnet\graphql-api-dotnet.csproj", "{013988B1-0CF1-46E8-A0AD-4A92CBA75EF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "db-library-csharp", "libraries\db-library-csharp\db-library-csharp.csproj", "{6AD7DCAF-5323-4B93-A83D-CCC830A5537A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{013988B1-0CF1-46E8-A0AD-4A92CBA75EF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{013988B1-0CF1-46E8-A0AD-4A92CBA75EF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{013988B1-0CF1-46E8-A0AD-4A92CBA75EF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AD7DCAF-5323-4B93-A83D-CCC830A5537A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AD7DCAF-5323-4B93-A83D-CCC830A5537A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AD7DCAF-5323-4B93-A83D-CCC830A5537A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AD7DCAF-5323-4B93-A83D-CCC830A5537A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

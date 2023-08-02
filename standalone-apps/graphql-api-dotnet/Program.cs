@@ -1,35 +1,43 @@
-namespace graphql_api_dotnet
+using db_library_csharp;
+using Microsoft.EntityFrameworkCore;
+using System.Reflection;
+
+namespace graphql_api_dotnet;
+
+public class Program
 {
-    public class Program
+    public static void Main(string[] args)
     {
-        public static void Main(string[] args)
-        {
-            var builder = WebApplication.CreateBuilder(args);
+        var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
+        // Add services to the container.
 
-            builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-            builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
+        builder.Services.AddControllers();
+        // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+        builder.Services.AddEndpointsApiExplorer();
+        builder.Services.AddSwaggerGen();
 
-            var app = builder.Build();
+        // GraphQL
+        builder.Services.AddGraphQLServer()
+            .AddQueryType<Query>()
+            .AddMutationType<Mutation>();
 
-            // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
-            {
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            }
+        //.RegisterGraphTypes(typeof(Program).Assembly);
 
-            app.UseHttpsRedirection();
+        // DB Conficugration
+        var configuration = builder.Configuration;
+        var connectionString = configuration.GetSection("ConnectionStrings:DbConnection").Value;
+        builder.Services.RegisterDbContext(connectionString);
 
-            app.UseAuthorization();
+        // App Setup
+        var app = builder.Build();
 
+        app.MapGraphQL();
 
-            app.MapControllers();
+        app.UseHttpsRedirection();
 
-            app.Run();
-        }
+        app.UseAuthorization();
+
+        app.Run();
     }
 }
