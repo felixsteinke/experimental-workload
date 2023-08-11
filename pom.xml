@@ -26,6 +26,7 @@
         <module>libraries/sorting-library-java</module>
         <module>standalone-apps/sorting-api-spring</module>
         <module>connected-apps/db-api-spring</module>
+        <module>standalone-apps/connectivity-api-spring</module>
     </modules>
 
 </project>
