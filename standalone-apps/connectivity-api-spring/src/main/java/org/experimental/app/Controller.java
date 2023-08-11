@@ -3,7 +3,6 @@ package org.experimental.app;
 import org.experimental.app.model.JdbcPing;
 import org.experimental.app.model.PingResponse;
 import org.experimental.app.model.RestPing;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +20,6 @@ public class Controller {
 
     private final WebClient webClient;
 
-    @Autowired
     public Controller() {
         this.webClient = WebClient.builder().build();
     }
@@ -37,7 +35,7 @@ public class Controller {
 
             pingResponse.setResponseBody(responseSpec.bodyToMono(String.class).block());
             pingResponse.setStatus(status);
-            pingResponse.setSuccess(status);
+            pingResponse.setSuccess(!status.is4xxClientError() && !status.is5xxServerError());
         } catch (Exception e) {
             pingResponse.setResponseBody(e.getClass().getSimpleName() + ": " + e.getMessage());
             pingResponse.setStatus(HttpStatusCode.valueOf(500));
