@@ -1,6 +1,8 @@
-﻿using Microsoft.Azure.Functions.Extensions.DependencyInjection;
+﻿using azure_sorting_function_csharp;
+using Microsoft.Azure.Functions.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 
+[assembly: FunctionsStartup(typeof(AzureFunctionStartup))]
 namespace azure_sorting_function_csharp;
 
 public class AzureFunctionStartup : FunctionsStartup
