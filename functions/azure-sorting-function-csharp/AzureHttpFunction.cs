@@ -13,6 +13,15 @@ namespace azure_sorting_function_csharp;
 
 public static class AzureHttpFunction
 {
+    [FunctionName("demo-function")]
+    public static IActionResult DemoFunction(
+        [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
+        ILogger log)
+    {
+        log.LogInformation($"Azure HTTP [{req.Method}] function will process a request.");
+        // Business Logic
+        return new OkObjectResult("Demo Response.");
+    }
 
     [FunctionName("sorting-fast")]
     public static async Task<IActionResult> RunFast(
@@ -28,7 +37,7 @@ public static class AzureHttpFunction
             return new BadRequestObjectResult("Only POST requests with body can be processed.");
         }
         // Process
-        log.LogInformation($"Request Body: " + ((requestBody.Length > 100) ? $"{requestBody.Substring(0, 100)} ...({(requestBody.Length - 100)} more characters)" : requestBody));
+        log.LogInformation($"Request Body: " + ((requestBody.Length > 100) ? $"{requestBody.Substring(0, 100)} ...({requestBody.Length - 100} more characters)" : requestBody));
         List<int> list = JsonConvert.DeserializeObject<List<int>>(requestBody);
         SortingProcessor.SortInON1(list);
         // Response
@@ -49,7 +58,7 @@ public static class AzureHttpFunction
             return new BadRequestObjectResult("Only POST requests with body can be processed.");
         }
         // Process
-        log.LogInformation($"Request Body: " + ((requestBody.Length > 100) ? $"{requestBody.Substring(0, 100)} ...({(requestBody.Length - 100)} more characters)" : requestBody));
+        log.LogInformation($"Request Body: " + ((requestBody.Length > 100) ? $"{requestBody.Substring(0, 100)} ...({requestBody.Length - 100} more characters)" : requestBody));
         List<int> list = JsonConvert.DeserializeObject<List<int>>(requestBody);
         SortingProcessor.SortInON2(list);
         // Response
