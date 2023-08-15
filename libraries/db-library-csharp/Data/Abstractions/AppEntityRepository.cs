@@ -1,5 +1,4 @@
-﻿using db_library_csharp.Data;
-using db_library_csharp.Entities.Abstractions;
+﻿using db_library_csharp.Entities.Abstractions;
 using Microsoft.Extensions.Logging;
 
 namespace db_library_csharp.Data.Abstractions;
